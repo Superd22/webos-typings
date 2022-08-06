@@ -1,13 +1,13 @@
 {
   "name": "webos-typings",
-  "version": "0.0.1",
+  "version": "1.0.0-beta.1",
   "description": "Type definitions for webos luna services",
-  "main": "index.js",
+  "types": "definitions/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT",
+  "license": "GPLv3",
   "devDependencies": {
     "semantic-release": "^19.0.3",
     "semantic-release-npm-github-publish": "^1.4.0"
