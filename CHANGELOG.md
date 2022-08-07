@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Superd22/webos-typings/compare/v1.0.0...v1.1.0) (2022-08-07)
+
+
+### feat
+
+* add documentation for interfaces and parameters ([6410323](https://github.com/Superd22/webos-typings/commit/64103232b8c31a372c8ea94b00993231f77fba6d))
+
 # 1.0.0 (2022-08-06)
 
 
