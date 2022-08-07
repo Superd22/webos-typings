@@ -3,7 +3,9 @@ interface ApplicationManager {
 }
 
 export interface ApplicationManagerLaunchParameters {
+    /** The ID of the app to launch. */
     id: string;
+    /** The object that contains the parameters for the target application. */
     params?: any;
 }
 
@@ -39,7 +41,14 @@ export enum ApplicationManagerLaunchError {
 }
 
 export interface ApplicationManagerLaunchCallReturn {
+    /** The flag that indicates the success/failure of the request. */
+    /** true: Success */
+    /** false: Failure */
     returnValue: boolean;
+    /** errorCode contains the error code if the method fails. The method returns errorCode only if it fails. */
+    /** See the Error Codes Reference of this method for more details. */
     errorCode?: number;
+    /** errorText contains the error text if the method fails. The method returns errorText only if it fails. */
+    /** See the Error Codes Reference of this method for more details. */
     errorText?: string;
 }

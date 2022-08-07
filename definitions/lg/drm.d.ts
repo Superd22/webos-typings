@@ -3,7 +3,11 @@ interface DRM {
 }
 
 export interface DRMLoadParameters {
+    /** DRM type */
+    /** PlayReady: "playready" */
+    /** Widevine: "widevine" */
     drmType: string;
+    /** Unique ID of the application using DRM client */
     appId?: string;
 }
 
@@ -20,8 +24,16 @@ export enum DRMLoadError {
 }
 
 export interface DRMLoadCallReturn {
+    /** Flag that indicates success/failure of the request. */
+    /** true: Success */
+    /** false: Failure */
     returnValue: boolean;
+    /** Unique ID of DRM client instance */
     clientId?: string;
+    /** errorCode contains the error code if the method fails. The method will return errorCode only if it fails. */
+    /** See the Error Codes Reference of this method for more details. */
     errorCode?: number;
+    /** errorText contains the error text if the method fails. The method will return errorText only if it fails. */
+    /** See the Error Codes Reference of this method for more details. */
     errorText?: string;
 }
