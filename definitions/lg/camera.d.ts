@@ -3,6 +3,7 @@ interface Camera {
 }
 
 export interface CameraGetInfoParameters {
+    /** Device URI */
     uri: string;
 }
 
@@ -52,15 +53,27 @@ export enum CameraGetInfoError {
 }
 
 export interface CameraInfo {
+    /** Device name */
     name: string;
+    /** Device type (camera or microphone) */
     type: string;
+    /** Flag that indicates whether the device is built in or not. */
     builtin: boolean;
+    /** Object that holds information about recording resolution, supported video format, sampling rate, and audio code. */
     details: any;
 }
 
 export interface CameraGetInfoCallReturn {
+    /** Flag that indicates success/failure of the request. */
+    /** true: Success */
+    /** false: Failure */
     returnValue: boolean;
+    /** errorCode contains the error code if the method fails. The method will return errorCode only if it fails. */
+    /** See the Error Codes Reference of this method for more details. */
     errorCode?: number;
+    /** errorText contains the error text if the method fails. The method will return errorText only if it fails. */
+    /** See the Error Codes Reference of this method for more details. */
     errorText?: string;
+    /** Object that holds the detailed information of a device. */
     info?: CameraInfo;
 }

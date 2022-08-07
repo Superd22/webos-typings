@@ -15,6 +15,9 @@ All of this is pretty WIP.
 
 ## Todo
 
+- [ ] Some services are screwed up because of inconsistencies
+- [ ] Shared interfaces between services
+- [ ] Link to actual http docs from code
 - [ ] Interface for the service itself
 - [ ] Base types for shared properties
 - [ ] Discriminated union of services

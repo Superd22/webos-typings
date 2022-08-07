@@ -3,6 +3,7 @@ interface MediaDatabase {
 }
 
 export interface MediaDatabaseBatchParameters {
+    /** The list of database operations to perform. */
     operations: objectarray;
 }
 
@@ -13,6 +14,8 @@ export enum MediaDatabaseBatchError {
 }
 
 export interface MediaDatabaseBatchCallReturn {
+    /** If the method succeeds, it will return BatchResponse object. */
     BatchResponse?: any;
+    /** If the method fails, it will return ErrResponse object. */
     ErrResponse?: any;
 }
